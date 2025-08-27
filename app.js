@@ -231,4 +231,7 @@ app.get('/api/quiz/by-code', async (req,res)=>{
   }
 })
 
+// app.js listen 전에
+ensureKuroReady().then(() => console.log('Kuroshiro ready (preloaded)'))
+
 app.listen(PORT, ()=>{ console.log(`✅ utatle_back on http://localhost:${PORT}`) })

@@ -155,7 +155,6 @@ async function deeplTranslateLinesKoToJa(lines) {
       const params = new URLSearchParams()
       params.append('auth_key', DEEPL_KEY)
       need.forEach(({ text }) => params.append('text', text))
-      params.append('source_lang', 'KO')
       params.append('target_lang', 'JA')
 
       const r = await fetch(TRANSLATE_URL, {
